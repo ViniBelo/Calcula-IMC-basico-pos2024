@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@android:dimen/thumbnail_height"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_gravity="center"
+            android:text="IMC" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_gravity="center"
+            android:text="0.0" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@android:dimen/thumbnail_height"
+        android:orientation="vertical"
+        android:layout_gravity="bottom" >
+
+        <TextView
+            android:id="@+id/tvWidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_gravity="center"
+            android:text="Peso" />
+
+        <EditText
+            android:id="@+id/etWidth"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textAlignment="center"
+            android:inputType="numberDecimal"
+            android:hint="Peso em kg"/>
+
+        <TextView
+            android:id="@+id/tvHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_gravity="center"
+            android:text="Altura" />
+
+        <EditText
+            android:id="@+id/etHeight"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textAlignment="center"
+            android:inputType="numberDecimal"
+            android:hint="Altura em m"/>
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/btCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="Calcular"
+            android:onClick="btCalculateOnClick"/>
+
+        <Button
+            android:id="@+id/btClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:text="Limpar" />
+
+    </GridLayout>
+
+</LinearLayout>
